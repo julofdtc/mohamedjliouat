@@ -9,8 +9,8 @@ lang: ar
 direction: rtl
 
 # GitHub Pages
-baseurl: "/mohamedjliouat"
-url: "https://julofdtc.github.io"
+baseurl: ""
+url: "https://mhamedjliouat.com"
 
 # Build settings
 markdown: kramdown
