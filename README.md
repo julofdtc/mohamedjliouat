@@ -1,4 +1,4 @@
-# مدونة محمد جليوات | Blog de Mhamed Jliouat
+# مدونة محمد اجليوت | Blog de Mhamed Jliouat
 
 مدونة شخصية لنشر المقالات باللغة العربية، مستضافة على GitHub Pages.
 
@@ -173,6 +173,11 @@ family/
 - Design **RTL** (droite à gauche) pour l'arabe
 - Polices : **Noto Naskh Arabic** + **Amiri** (Google Fonts)
 - Responsive : fonctionne sur mobile et desktop
+- **Mode sombre** avec basculement automatique
+- **Temps de lecture** estimé pour chaque article
+- **Bouton de partage** (copier le lien)
+- **Scroll to top** pour les longs articles
+- **Design Marocain** avec couleurs et ornements inspirés du zellige
 - Pour tester localement :
   ```bash
   gem install bundler jekyll

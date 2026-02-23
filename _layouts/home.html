@@ -4,14 +4,19 @@ layout: default
 
 <div class="home">
   <section class="hero">
+    <span class="hero-bismillah">﷽</span>
     <h1 class="hero-title">{{ site.title }}</h1>
     <p class="hero-desc">{{ site.description }}</p>
+    <div class="moroccan-border"></div>
   </section>
 
   <section class="posts-list">
     <h2 class="section-title">المقالات</h2>
     {% assign sorted_posts = site.posts | sort: 'date' | reverse %}
     {% for post in sorted_posts %}
+    {% assign words = post.content | number_of_words %}
+    {% assign reading_time = words | divided_by: 150 %}
+    {% if reading_time == 0 %}{% assign reading_time = 1 %}{% endif %}
     <article class="post-card">
       <a href="{{ post.url | relative_url }}" class="post-card-link">
         <div class="post-card-content">
@@ -22,8 +27,9 @@ layout: default
           <p class="post-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 40 }}</p>
           <div class="post-card-meta">
             <time datetime="{{ post.date | date_to_xmlschema }}">
-              {{ post.date | date: "%Y/%m/%d" }}
+              📅 {{ post.date | date: "%Y/%m/%d" }}
             </time>
+            <span class="post-card-reading-time">📖 {{ reading_time }} د قراءة</span>
             {% if post.category %}
             <span class="post-card-category">{{ post.category }}</span>
             {% endif %}
