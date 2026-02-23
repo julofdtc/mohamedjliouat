@@ -8,24 +8,33 @@ Blog personnel pour publier des articles en arabe, hébergé sur GitHub Pages.
 
 ## 🚀 Déploiement sur GitHub Pages
 
-### Première fois (à faire par le développeur)
+### ✅ Déploiement effectué le 23/02/2026
 
-1. Créer un repository sur GitHub : `julofdtc/mohamedjliouat`
-2. Pousser le code :
+Le site est **en ligne** à : **https://julofdtc.github.io/mohamedjliouat/**
+
+#### Processus de déploiement utilisé :
+
+1. **Création du repo** via l'API GitHub :
+   ```
+   POST https://api.github.com/user/repos
+   → julofdtc/mohamedjliouat (public)
+   ```
+
+2. **Push du code** depuis le dossier local :
    ```bash
    cd mohamedjliouat
-   git init
-   git add .
-   git commit -m "Initial blog setup"
-   git branch -M main
+   git add -A && git commit -m "Ready for GitHub Pages"
    git remote add origin https://github.com/julofdtc/mohamedjliouat.git
    git push -u origin main
    ```
-3. Aller dans **Settings > Pages** sur GitHub
-4. Sous "Source", sélectionner **Deploy from a branch**
-5. Choisir **main** branch, dossier **/ (root)**
-6. Cliquer **Save**
-7. Le site sera disponible à : `https://julofdtc.github.io/mohamedjliouat/`
+
+3. **Activation de GitHub Pages** via l'API :
+   ```
+   POST https://api.github.com/repos/julofdtc/mohamedjliouat/pages
+   → source: branch "main", path "/"
+   ```
+
+4. **Build automatique** par GitHub (~1 min) → Site en ligne !
 
 ### Configuration `_config.yml` (déjà faite)
 
@@ -33,6 +42,15 @@ Blog personnel pour publier des articles en arabe, hébergé sur GitHub Pages.
 baseurl: "/mohamedjliouat"                   # nom du repo
 url: "https://julofdtc.github.io"            # URL GitHub Pages
 ```
+
+### Re-déployer / Mettre à jour
+
+Chaque commit sur la branche `main` déclenche automatiquement un rebuild du site.
+- Via GitHub.com : modifier un fichier → Commit → le site se met à jour en ~1 min
+- Via terminal :
+  ```bash
+  git add -A && git commit -m "description" && git push
+  ```
 
 ---
 
