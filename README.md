@@ -1,4 +1,4 @@
-# مدونة محمد اجليوت | Blog de Mhamed Jliouat
+# مدونة محمد اجليوط | Blog de Mhamed Jliouat
 
 مدونة شخصية لنشر المقالات باللغة العربية، مستضافة على GitHub Pages.
 
@@ -10,29 +10,28 @@ Blog personnel pour publier des articles en arabe, hébergé sur GitHub Pages.
 
 ### Première fois (à faire par le développeur)
 
-1. Créer un repository sur GitHub (ex: `juldtc/family`)
+1. Créer un repository sur GitHub : `julofdtc/mohamedjliouat`
 2. Pousser le code :
    ```bash
-   cd family
+   cd mohamedjliouat
    git init
    git add .
    git commit -m "Initial blog setup"
    git branch -M main
-   git remote add origin https://github.com/juldtc/family.git
+   git remote add origin https://github.com/julofdtc/mohamedjliouat.git
    git push -u origin main
    ```
 3. Aller dans **Settings > Pages** sur GitHub
 4. Sous "Source", sélectionner **Deploy from a branch**
 5. Choisir **main** branch, dossier **/ (root)**
 6. Cliquer **Save**
-7. Le site sera disponible à : `https://juldtc.github.io/family/`
+7. Le site sera disponible à : `https://julofdtc.github.io/mohamedjliouat/`
 
-### Mettre à jour `_config.yml` pour la production
+### Configuration `_config.yml` (déjà faite)
 
-Modifier ces lignes dans `_config.yml` :
 ```yaml
-baseurl: "/family"                          # nom du repo
-url: "https://juldtc.github.io"             # votre URL GitHub Pages
+baseurl: "/mohamedjliouat"                   # nom du repo
+url: "https://julofdtc.github.io"            # URL GitHub Pages
 ```
 
 ---
@@ -41,7 +40,7 @@ url: "https://juldtc.github.io"             # votre URL GitHub Pages
 
 ### الطريقة (عبر موقع GitHub) | Via le site GitHub
 
-1. **Allez sur** : `https://github.com/juldtc/family`
+1. **Allez sur** : `https://github.com/julofdtc/mohamedjliouat`
 2. **Ouvrez le dossier** `_posts`
 3. **Cliquez** sur **"Add file"** → **"Create new file"**
 4. **Nommez le fichier** avec ce format :
@@ -144,7 +143,7 @@ category: "ثقافة"
 ## 🏗️ Structure du projet
 
 ```
-family/
+mohamedjliouat/
 ├── _config.yml          ← Configuration du blog
 ├── _layouts/            ← Templates HTML
 │   ├── default.html
@@ -184,7 +183,7 @@ family/
   bundle install
   bundle exec jekyll serve
   ```
-  Puis ouvrir `http://localhost:4000/family/`
+  Puis ouvrir `http://localhost:4000/mohamedjliouat/`
 
 ---
 

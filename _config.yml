@@ -1,16 +1,16 @@
 # =============================================
-# مدونة محمد اجليوت | Blog de Mhamed Jliouat
+# مدونة محمد اجليوط | Blog de Mhamed Jliouat
 # =============================================
 
-title: "محمد اجليوت"
-description: "مقالات و كتابات محمد اجليوت"
-author: "محمد اجليوت"
+title: "محمد اجليوط"
+description: "مقالات و كتابات محمد اجليوط"
+author: "محمد اجليوط"
 lang: ar
 direction: rtl
 
 # GitHub Pages
-baseurl: "/family"  # Change to "" if using username.github.io
-url: ""             # Change to "https://username.github.io" when deploying
+baseurl: "/mohamedjliouat"
+url: "https://julofdtc.github.io"
 
 # Build settings
 markdown: kramdown

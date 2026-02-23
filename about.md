@@ -6,7 +6,7 @@ permalink: /about/
 
 <div class="page-content">
 
-<h1>محمد اجليوت</h1>
+<h1>محمد اجليوط</h1>
 
 <div class="moroccan-border"></div>
 
