@@ -1,0 +1,186 @@
+# مدونة محمد جليوات | Blog de Mhamed Jliouat
+
+مدونة شخصية لنشر المقالات باللغة العربية، مستضافة على GitHub Pages.
+
+Blog personnel pour publier des articles en arabe, hébergé sur GitHub Pages.
+
+---
+
+## 🚀 Déploiement sur GitHub Pages
+
+### Première fois (à faire par le développeur)
+
+1. Créer un repository sur GitHub (ex: `juldtc/family`)
+2. Pousser le code :
+   ```bash
+   cd family
+   git init
+   git add .
+   git commit -m "Initial blog setup"
+   git branch -M main
+   git remote add origin https://github.com/juldtc/family.git
+   git push -u origin main
+   ```
+3. Aller dans **Settings > Pages** sur GitHub
+4. Sous "Source", sélectionner **Deploy from a branch**
+5. Choisir **main** branch, dossier **/ (root)**
+6. Cliquer **Save**
+7. Le site sera disponible à : `https://juldtc.github.io/family/`
+
+### Mettre à jour `_config.yml` pour la production
+
+Modifier ces lignes dans `_config.yml` :
+```yaml
+baseurl: "/family"                          # nom du repo
+url: "https://juldtc.github.io"             # votre URL GitHub Pages
+```
+
+---
+
+## ✍️ كيف تضيف مقالاً جديداً؟ | Comment ajouter un article ?
+
+### الطريقة (عبر موقع GitHub) | Via le site GitHub
+
+1. **Allez sur** : `https://github.com/juldtc/family`
+2. **Ouvrez le dossier** `_posts`
+3. **Cliquez** sur **"Add file"** → **"Create new file"**
+4. **Nommez le fichier** avec ce format :
+   ```
+   YYYY-MM-DD-titre-en-latin.md
+   ```
+   Exemple : `2026-03-15-mon-article.md`
+
+5. **Copiez ce modèle** au début du fichier :
+   ```markdown
+   ---
+   title: "عنوان المقال هنا"
+   subtitle: "عنوان فرعي (اختياري)"
+   date: 2026-03-15
+   category: "عام"
+   ---
+
+   اكتب نص المقال هنا...
+
+   ## عنوان فرعي
+
+   فقرة جديدة هنا...
+
+   > اقتباس مميز
+   ```
+
+6. **Cliquez** sur **"Commit new file"** (bouton vert en bas)
+7. **Attendez ~1 minute** → L'article apparaît automatiquement sur le site !
+
+### نموذج مقال | Modèle d'article
+
+```markdown
+---
+title: "عنوان المقال"
+subtitle: "وصف مختصر"
+date: 2026-03-15
+category: "ثقافة"
+---
+
+بسم الله الرحمن الرحيم
+
+هنا يبدأ نص المقال. اكتب كل ما تريد هنا بحرية.
+
+## عنوان فرعي
+
+فقرة جديدة تحت العنوان الفرعي.
+
+- نقطة أولى
+- نقطة ثانية
+- نقطة ثالثة
+
+> هذا اقتباس أو جملة مميزة تريد إبرازها
+
+### عنوان أصغر
+
+تكملة النص هنا...
+```
+
+### التنسيقات المتاحة | Formatage disponible
+
+| ماذا تريد؟ | ماذا تكتب؟ | النتيجة |
+|---|---|---|
+| عنوان كبير | `## عنوان` | عنوان كبير |
+| عنوان صغير | `### عنوان` | عنوان صغير |
+| خط عريض | `**كلمة**` | **كلمة** |
+| خط مائل | `*كلمة*` | *كلمة* |
+| اقتباس | `> نص الاقتباس` | نص مميز |
+| قائمة نقاط | `- عنصر` | • عنصر |
+| خط فاصل | `---` | ─────── |
+
+### الفئات المقترحة | Catégories suggérées
+
+| الفئة | الوصف |
+|---|---|
+| `عام` | مواضيع عامة |
+| `ثقافة` | مقالات ثقافية وأدبية |
+| `مجتمع` | قضايا اجتماعية |
+| `رأي` | مقالات رأي |
+| `تاريخ` | مقالات تاريخية |
+
+---
+
+## 🗑️ حذف مقال | Supprimer un article
+
+1. Allez dans le dossier `_posts` sur GitHub
+2. Cliquez sur le fichier à supprimer
+3. Cliquez sur l'icône **🗑️ (Delete)** en haut à droite
+4. Confirmez avec **"Commit changes"**
+
+## ✏️ تعديل مقال | Modifier un article
+
+1. Allez dans le dossier `_posts` sur GitHub
+2. Cliquez sur le fichier à modifier
+3. Cliquez sur l'icône **✏️ (Edit)** en haut à droite
+4. Modifiez le contenu
+5. Cliquez sur **"Commit changes"**
+
+---
+
+## 🏗️ Structure du projet
+
+```
+family/
+├── _config.yml          ← Configuration du blog
+├── _layouts/            ← Templates HTML
+│   ├── default.html
+│   ├── home.html
+│   └── post.html
+├── _includes/           ← Composants réutilisables
+│   ├── head.html
+│   ├── header.html
+│   └── footer.html
+├── _posts/              ← 📝 LES ARTICLES ICI
+│   ├── 2026-02-15-education-values.md
+│   ├── 2026-02-20-reading-in-digital-age.md
+│   └── 2026-02-23-welcome.md
+├── assets/
+│   ├── css/style.css    ← Styles du blog
+│   └── favicon.svg      ← Icône du site
+├── index.md             ← Page d'accueil
+├── about.md             ← Page "À propos"
+└── README.md            ← Ce fichier
+```
+
+## 💡 Pour le développeur
+
+- Le site utilise **Jekyll** (intégré à GitHub Pages)
+- **Aucun build local nécessaire** — GitHub le fait automatiquement
+- Design **RTL** (droite à gauche) pour l'arabe
+- Polices : **Noto Naskh Arabic** + **Amiri** (Google Fonts)
+- Responsive : fonctionne sur mobile et desktop
+- Pour tester localement :
+  ```bash
+  gem install bundler jekyll
+  bundle install
+  bundle exec jekyll serve
+  ```
+  Puis ouvrir `http://localhost:4000/family/`
+
+---
+
+**صنع بكل حب ❤️ | Fait avec amour**

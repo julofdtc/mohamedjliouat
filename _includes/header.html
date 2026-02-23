@@ -1,0 +1,12 @@
+<header class="site-header">
+  <div class="container">
+    <a href="{{ '/' | relative_url }}" class="site-title">
+      <span class="site-title-icon">✦</span>
+      {{ site.title }}
+    </a>
+    <nav class="site-nav">
+      <a href="{{ '/' | relative_url }}" {% if page.url == '/' %}class="active"{% endif %}>الرئيسية</a>
+      <a href="{{ '/about' | relative_url }}" {% if page.url == '/about/' %}class="active"{% endif %}>من أنا</a>
+    </nav>
+  </div>
+</header>

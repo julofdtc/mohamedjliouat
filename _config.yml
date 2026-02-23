@@ -1,0 +1,37 @@
+# =============================================
+# مدونة محمد جليوات | Blog de Mhamed Jliouat
+# =============================================
+
+title: "محمد جليوات"
+description: "مقالات و كتابات محمد جليوات"
+author: "محمد جليوات"
+lang: ar
+direction: rtl
+
+# GitHub Pages
+baseurl: "/family"  # Change to "" if using username.github.io
+url: ""             # Change to "https://username.github.io" when deploying
+
+# Build settings
+markdown: kramdown
+permalink: /:year/:month/:day/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+# Exclude from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - node_modules
